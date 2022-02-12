@@ -1,0 +1,11 @@
+<p>view-image works!</p>
+<img style="height: 400px; width: 400px" [src]="imageUrl" alt="image" />
+<form [formGroup]="reviewForm" (ngSubmit)="save()">
+  <label for="rating:">rating:</label>
+  <input type="text" formControlName="rating" />
+  <label for="providedBy:">providedBy:</label>
+  <input type="text" formControlName="providedBy" />
+  <label for="reason:">reason:</label>
+  <input type="text" formControlName="reason" />
+  <button type="submit">save</button>
+</form>

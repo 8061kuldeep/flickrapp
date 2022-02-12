@@ -1,0 +1,16 @@
+<h2>listing image</h2>
+<div class="col-md-12" style="display: flex; flex-wrap: wrap">
+  <div *ngFor="let images of images; index as ind" class="col-md-4">
+    <img style="height: 400px; width: 400px" [src]="images.url" alt="image" />
+
+    <div *ngIf="images.review">
+      <p>rating: {{ images.review.rating }}</p>
+
+      <p>providedBy: {{ images.review.providedBy }}</p>
+
+      <p>reason: {{ images.review.reason }}</p>
+    </div>
+
+    <button (click)="chooseImaeg(images)">choose image</button>
+  </div>
+</div>
